@@ -8,7 +8,7 @@ Supports Windows and Linux, HLS and MPD sources, custom output naming, and loop-
 
 ## Description
 
-RecStreams is a collection of scripts that allow you to record and archive live streams easily on Windows and Linux.  
+StreamLoop is a collection of scripts that allow you to record and archive live streams easily on Windows and Linux.  
 It features automated timestamp file generation, reconnect loops, and optional MPD KEY input for DRM-like cases.
 
 ### Features
