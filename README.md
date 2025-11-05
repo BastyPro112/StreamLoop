@@ -53,7 +53,7 @@ choco install streamlink
 
 ### 🐧 Install requirements on Linux
 
-**Debian/Ubuntu:**
+Debian/Ubuntu:
 ```bash
 sudo apt install streamlink ffmpeg
 ```
