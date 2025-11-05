@@ -38,7 +38,7 @@ It features automated timestamp file generation, reconnect loops, and optional M
 - A valid stream URL (M3U8 / MPD / etc.)
 - Internet connection
 
-### 🪟 Install on Windows
+### 🪟 Install requirements on Windows
 
 Scoop:
 ```powershell
@@ -51,8 +51,9 @@ Chocolatey:
 choco install streamlink
 ```
 
-### 🐧 Install on Linux
+### 🐧 Install requirements on Linux
 
+**Debian/Ubuntu:**
 ```bash
 sudo apt install streamlink ffmpeg
 ```
