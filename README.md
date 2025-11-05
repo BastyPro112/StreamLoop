@@ -115,6 +115,7 @@ Example:
 * Edit scripts if you want to change output directory (Important!
 * Only KEY needed for MPD (not KID)
 * Best used for IPTV archiving projects
+* Some streams use a continous MPEG-TS stream format instead of HLS. For that, you can use "httpstream://" instead of "http://".
 
 ## 🏷️ Maintained by
 
