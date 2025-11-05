@@ -1,10 +1,18 @@
-```@echo off
+@echo off
 :: Initial Variables
+:: Here you can modify the variable for specifying the folder where StreamLoop will save its recordings to.
+set RECORDING_FOLDER=C:/StreamloopRec
 set loopcount=10200
 set myvalue=0
-set /p URL=Enter URL: (aquí va el enlace)
-set /p KEY=Enter KEY: (se acuerdan de que aquí las keys se componen como KID:KEY?, aquí solo se debe poner la parte del "KEY", no la clave entera)
+set /p URL=Enter URL:
+set /p KEY=Enter KEY (as on KID:KEY): 
 set /p NAME=Enter Filename:
+
+:: Make sure the output folder actually exists
+if not exist "%RECORDING_FOLDER%/%NAME%" (
+    mkdir "%RECORDING_FOLDER%/%NAME%"
+)
+set RECPATH=%RECORDING_FOLDER%/%NAME%
 
 :loop
 :: Get System Date
@@ -16,11 +24,10 @@ set "fullstamp=%YYYY%-%MM%-%DD%_%HH%-%Min%-%Sec%"
 
 :: Start the stream
 set /a myvalue=myvalue+1
-streamlink %URL% best --ffmpeg_dkey "%KEY%" -o "C:/Users/USUARIO/Videos/%NAME%/%datestamp%-%timestamp%.ts"
-:: streamlink %URL% best -o "C:/Users/USUARIO/Videos/%NAME%_%myvalue%.ts"
+streamlink %URL% best --ffmpeg_dkey "%KEY%" -o "%RECPATH%/%datestamp%-%timestamp%.ts"
+:: streamlink %URL% best -o "%RECPATH%/%NAME%_%myvalue%.ts"
 set /a loopcount=loopcount-1
 if %loopcount%==0 goto exitloop
 goto loop
 :exitloop
 pause
-```

@@ -10,13 +10,13 @@ set /p "NAME=Enter Filename: "
 :: ---------------------------------------
 :: Configurable Variables
 :: ---------------------------------------
-set "BASE_PATH=E:\Videos\Streamlink"
+set "BASE_PATH=C:\StreamloopRec"
 set "LOOPCOUNT=10200"
 set "COUNTER=0"
 
 :: Ensure output folder exists
-if not exist "%BASE_PATH%%NAME%" (
-    mkdir "%BASE_PATH%%NAME%"
+if not exist "%BASE_PATH%\%NAME%" (
+    mkdir "%BASE_PATH%\%NAME%"
 )
 
 :: ---------------------------------------
@@ -30,7 +30,7 @@ for /f %%A in ('powershell -NoLogo -NoProfile -Command "(Get-Date).ToString("yyy
 set /a COUNTER+=1
 
 :: Output file (centralized path usage)
-set "OUTFILE=%BASE_PATH%%NAME%%STAMP%.ts"
+set "OUTFILE=%BASE_PATH%\%NAME%\%STAMP%.ts"
 
 echo Recording... File: %OUTFILE%
 streamlink "%URL%" best -o "%OUTFILE%"

@@ -38,7 +38,7 @@ It features automated timestamp file generation, reconnect loops, and optional M
 - A valid stream URL (M3U8 / MPD / etc.)
 - Internet connection
 
-### 🪟 Install on Windows
+### 🪟 Install requirements on Windows
 
 Scoop:
 ```powershell
@@ -51,8 +51,9 @@ Chocolatey:
 choco install streamlink
 ```
 
-### 🐧 Install on Linux
+### 🐧 Install requirements on Linux
 
+Debian/Ubuntu:
 ```bash
 sudo apt install streamlink ffmpeg
 ```
@@ -114,6 +115,7 @@ Example:
 * Edit scripts if you want to change output directory (Important!
 * Only KEY needed for MPD (not KID)
 * Best used for IPTV archiving projects
+* Some streams use a continous MPEG-TS stream format instead of HLS. For that, you can use "httpstream://" instead of "http://".
 
 ## 🏷️ Maintained by
 
@@ -144,5 +146,4 @@ Incluye automatización de nombres por fecha/hora, bucles para reconexión autom
 > 👥 Proyecto mantenido por la comunidad de **ForoMedios.com**
 > Únete aquí → [https://discord.foromedios.com](https://discord.foromedios.com)
 
-```
 
