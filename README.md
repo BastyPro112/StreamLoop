@@ -91,6 +91,18 @@ Enter URL: https://example-stream.m3u8
 Enter Filename: MyChannel
 ```
 
+### Linux (MPD + KEY)
+
+```bash
+chmod +x linux-mpd.sh
+./linux-mpd.sh
+Enter URL: https://example/manifest.mpd
+Enter KEY: 8bfa1c35d74aeef43f2ae81234567890
+Enter Filename: MyChannel
+```
+
+> ⚠️ For MPD KEY: Only enter the KEY value (not full `KID:KEY`).
+
 ---
 
 ## 🗃 Output Format
