@@ -28,6 +28,7 @@ It features automated timestamp file generation, reconnect loops, and optional M
 | `windows.bat` | Windows | Standard HLS recording |
 | `windows-mpd.bat` | Windows | Recording MPD streams w/ KEY input |
 | `linux.sh` | Linux | Standard HLS recording |
+| `linux-mpd.sh` | Linux | Recording MPD streams w/ KEY input |
 
 ---
 
